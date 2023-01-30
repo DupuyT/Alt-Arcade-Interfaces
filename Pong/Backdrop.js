@@ -14,7 +14,7 @@ function backdrop() {
         y += dottedLength*2;
     }
 
-    textFont(retroFont);
+    // textFont(retroFont);
     textSize(100);
     noStroke();
     fill(80);

@@ -1,0 +1,18 @@
+{
+  "dependencies": {
+    "node.js": "^0.0.1-security",
+    "nodejs": "^0.0.0",
+    "parcel": "^2.8.3",
+    "webkit": "^0.0.0"
+  },
+  "name": "pong",
+  "version": "1.0.0",
+  "main": "Backdrop.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": ""
+}

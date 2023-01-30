@@ -3,5 +3,6 @@ html, body {
     padding: 0;
     display: flex;
     justify-content: center;
+    padding: 2em;
   }
   

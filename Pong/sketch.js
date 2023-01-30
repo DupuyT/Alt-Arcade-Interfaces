@@ -1,9 +1,9 @@
 let ball, p1, p2, retroFont;
 let go = false;
 
-function preload() {
-	retroFont = loadFont("ARCADECLASSIC.TTF");
-}
+// function preload() {
+// 	retroFont = loadFont('https://fonts.adobe.com/fonts/acumin-variable#fonts-section');
+// }
 
 function setup() {
   
@@ -13,7 +13,7 @@ function setup() {
 	    'Good Luck!');
 
 	createCanvas(1000, 600)
-	ball = new Ball(width/2, height/2, 10, 10);
+	ball = new Ball(width/2, height/2, 10, 3);
 
 	p1 = new Paddle(20, height/2 - 50, 10, 100);
 	p2 = new Paddle(width - 30, height/2 - 50, 10, 100);
