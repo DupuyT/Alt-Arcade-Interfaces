@@ -4,6 +4,7 @@ class Ball {
         this.spawn = createVector(x, y)
         this.speed = speed;
         this.r = r;
+        this.startSpeed = speed;
         this.resetball();
     }
     
@@ -11,7 +12,8 @@ class Ball {
     resetball() {
         this.pos = this.spawn.copy();
         let angle = random(-PI/4, PI/4)
-        this.vel = p5.Vector.fromAngle(angle, this.speed);
+        this.vel = p5.Vector.fromAngle(angle, this.startSpeed);
+        this.speed = this.startSpeed;
         if (random(1) > 0.5) this.vel.x *= -1;
     }
 
@@ -58,11 +60,13 @@ class Ball {
                     // basically halve that angle so it points more to the center
                     let a = this.vel.heading();
                     if (a > -PI/2 && a < PI/2) {
-                        this.vel = p5.Vector.fromAngle(a/2, 3);
+                        this.vel = p5.Vector.fromAngle(a/2, this.speed);
+                        this.speed++
                     } else {
                         this.vel.rotate(PI);
                         let a = this.vel.heading();
-                        this.vel = p5.Vector.fromAngle(PI + a/2, 3);
+                        this.vel = p5.Vector.fromAngle(PI + a/2, this.speed);
+                        this.speed++
                     }
 
                 }
